@@ -25,4 +25,13 @@ public class Student {
     public void setName(String name) { this.name = name; }
     public void setDob(String dob) { this.dob = dob; }
     public void setMarks(double marks) { this.marks = marks; }
+
+    // Display student details
+    public void display() {
+        System.out.println("\nStudent Details:");
+        System.out.println("PRN: " + prn);
+        System.out.println("Name: " + name);
+        System.out.println("DOB: " + dob);
+        System.out.println("Marks: " + marks);
+    }
 }
