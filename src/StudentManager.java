@@ -13,4 +13,9 @@ public class StudentManager {
         students = new ArrayList<>();
         scanner = new Scanner(System.in);
     }
+
+    // Function to validate PRN (must be exactly 11 digits)
+    private boolean isValidPrn(String prn) {
+        return prn.matches("\\d{11}");
+    }
 }
