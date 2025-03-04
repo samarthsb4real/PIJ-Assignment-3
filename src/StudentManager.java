@@ -83,4 +83,29 @@ public class StudentManager {
         }
         System.out.println("❌ No student found with that name.");
     }
+
+    // Function to update student details
+    public void updateStudent() {
+        System.out.print("Enter 11-digit PRN to update: ");
+        String prn = scanner.next();
+
+        if (!isValidPrn(prn)) {
+            System.out.println("Invalid PRN format! Must be 11 numeric digits.");
+            return;
+        }
+
+        for (Student student : students) {
+            if (student.getPrn().equals(prn)) {
+                System.out.print("Enter new Name: ");
+                student.setName(scanner.next());
+                System.out.print("Enter new DOB: ");
+                student.setDob(scanner.next());
+                System.out.print("Enter new Marks: ");
+                student.setMarks(scanner.nextDouble());
+                System.out.println("✅ Student updated successfully!");
+                return;
+            }
+        }
+        System.out.println("❌ Student not found.");
+    }
 }
