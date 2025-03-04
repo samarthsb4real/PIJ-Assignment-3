@@ -20,6 +20,22 @@ public class Main {
             System.out.println("6. Delete Student");
             System.out.println("7. Exit");
             System.out.print("Enter choice: ");
+
+            int choice = scanner.nextInt();
+            switch (choice) {
+                case 1 -> manager.addStudent();
+                case 2 -> manager.displayStudents();
+                case 3 -> manager.searchByPrn();
+                case 4 -> manager.searchByName();
+                case 5 -> manager.updateStudent();
+                case 6 -> manager.deleteStudent();
+                case 7 -> {
+                    System.out.println("Exiting... Thank you!");
+                    scanner.close();
+                    return;
+                }
+                default -> System.out.println("Invalid choice! Try again.");
+            }
         }
     }
 }
