@@ -50,4 +50,23 @@ public class StudentManager {
             student.display();
         }
     }
+
+    // Function to search student by PRN
+    public void searchByPrn() {
+        System.out.print("Enter 11-digit PRN to search: ");
+        String prn = scanner.next();
+
+        if (!isValidPrn(prn)) {
+            System.out.println("Invalid PRN format! Must be 11 numeric digits.");
+            return;
+        }
+
+        for (Student student : students) {
+            if (student.getPrn().equals(prn)) {
+                student.display();
+                return;
+            }
+        }
+        System.out.println("❌ Student not found.");
+    }
 }
