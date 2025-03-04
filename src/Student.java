@@ -20,4 +20,9 @@ public class Student {
     public String getName() { return name; }
     public String getDob() { return dob; }
     public double getMarks() { return marks; }
+
+    // Setters
+    public void setName(String name) { this.name = name; }
+    public void setDob(String dob) { this.dob = dob; }
+    public void setMarks(double marks) { this.marks = marks; }
 }
