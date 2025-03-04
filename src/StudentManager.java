@@ -69,4 +69,18 @@ public class StudentManager {
         }
         System.out.println("❌ Student not found.");
     }
+
+    // Function to search student by Name
+    public void searchByName() {
+        System.out.print("Enter Name to search: ");
+        String name = scanner.next();
+
+        for (Student student : students) {
+            if (student.getName().equalsIgnoreCase(name)) {
+                student.display();
+                return;
+            }
+        }
+        System.out.println("❌ No student found with that name.");
+    }
 }
