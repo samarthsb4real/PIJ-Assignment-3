@@ -39,4 +39,15 @@ public class StudentManager {
         students.add(new Student(prn, name, dob, marks));
         System.out.println("✅ Student added successfully!");
     }
+
+    // Function to display all students
+    public void displayStudents() {
+        if (students.isEmpty()) {
+            System.out.println("No students found!");
+            return;
+        }
+        for (Student student : students) {
+            student.display();
+        }
+    }
 }
