@@ -108,4 +108,21 @@ public class StudentManager {
         }
         System.out.println("❌ Student not found.");
     }
+
+    // Function to delete a student
+    public void deleteStudent() {
+        System.out.print("Enter 11-digit PRN to delete: ");
+        String prn = scanner.next();
+
+        if (!isValidPrn(prn)) {
+            System.out.println("Invalid PRN format! Must be 11 numeric digits.");
+            return;
+        }
+
+        if (students.removeIf(student -> student.getPrn().equals(prn))) {
+            System.out.println("✅ Student deleted successfully!");
+        } else {
+            System.out.println("❌ Student not found.");
+        }
+    }
 }
