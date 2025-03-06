@@ -1,4 +1,4 @@
-**# Student Management System
+# Student Management System
 
 This is a simple Java-based Student Management System that allows you to add, display, search, update, and delete student records.
 
@@ -61,4 +61,3 @@ Contains the main method to run the application. It provides a menu-driven inter
 - **Samarth Sandesh Bhadane**
 - **PRN**: 24070126503
 - **Batch**: A2
-**
